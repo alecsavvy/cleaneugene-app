@@ -96,7 +96,7 @@ export default class App extends React.Component {
   }
   getAllReports = () => {
     console.log("getAllReports called")
-    return fetch('http://207.98.72.251:8000/reports')
+    return fetch('http://10.111.236.55:8000/reports')
       .then((response) => response.json())
       .then((responseJson) => {
         return responseJson.reports;
@@ -222,10 +222,8 @@ async loginWithFacebook() {
               value={this.state.password}
               secureTextEntry
             />
-            {/*
             <Button onPress={() => this.loginUser("alecsavvy@outlook.com", "grapes")}> Login! </Button>
-            */}
-            <Button onPress={() => this.loginUser(this.state.email, this.state.password)}> Login! </Button>
+            {/*<Button onPress={() => this.loginUser(this.state.email, this.state.password)}> Login! </Button> */}
             <Button onPress={() => this.signUpUser(this.state.email, this.state.password)}> Sign Up! </Button>
             {/* 
               Facebook Button, not working yet
